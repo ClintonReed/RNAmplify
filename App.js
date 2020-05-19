@@ -6,7 +6,7 @@ import {
 import Amplify, { API, graphqlOperation } from 'aws-amplify'
 import { createTodo } from './src/graphql/mutations'
 import { listTodos } from './src/graphql/queries'
-
+import { withAuthenticator } from 'aws-amplify-react-native'
 
 const initialState = { name: '', description: '' }
 
@@ -75,4 +75,4 @@ const styles = StyleSheet.create({
   todoName: { fontSize: 18 }
 })
 
-export default App
+export default withAuthenticator (App)
