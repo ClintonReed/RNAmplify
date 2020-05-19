@@ -7,7 +7,6 @@ import Amplify, { API, graphqlOperation } from 'aws-amplify'
 import { createTodo } from './src/graphql/mutations'
 import { listTodos } from './src/graphql/queries'
 
-Amplify.configure(config)
 
 const initialState = { name: '', description: '' }
 
